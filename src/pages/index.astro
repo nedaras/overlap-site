@@ -1,6 +1,8 @@
 ---
 import "../styles/global.css";
 import FaIcon from "../components/FaIcon.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
 import { faWindows } from "@fortawesome/free-brands-svg-icons";
 ---
 
@@ -12,21 +14,35 @@ import { faWindows } from "@fortawesome/free-brands-svg-icons";
 		<meta name="generator" content={Astro.generator} />
 		<title>Overlap</title>
   </head>
-  <!-- primary - #10191E -->
   <body>
-    <header class="px-16 py-16 text-center text-[#10191E]">
-      <h1 class="mb-2 text-center font-['Bitter',_serif] text-6xl font-medium">
+    <NavBar />
+    <header class="px-16 pt-32 pb-8 text-center text-[#10191E]">
+      <h1 class="mb-4 text-center font-['Bitter',_serif] text-6xl font-semibold underline">
         Overlap
       </h1>
-      <p class="mb-4">
+      <p class="mb-8 text-gray-900">
         See and control your music seamlessly in-game.
         <br class="hidden sm:inline">
         Open source, lightweight, and fast.
       </p>
-      <button class="rounded-md bg-[#10191E] px-4 py-2 text-white font-normal cursor-pointer">
+      <button class="relative cursor-pointer rounded-md bg-[#10191E] px-4 py-2 font-normal text-white">
         <FaIcon icon={faWindows} />
         Download for Windows
       </button>
+      <div class="mt-16 text-sm text-gray-900">
+        <p class="mb-4 font-semibold">
+          Overlap is currently in
+          <span class="mx-1 rounded border border-black px-1 py-0.5">ALPHA</span>
+        </p>
+        <p class="text-gray-700">
+          Please report any issues you encounter on
+          <a class="text-[#00DFA2] underline underline-offset-2" href="https://github.com/nedaras/overlap">GitHub.</a>
+        </p>
+      </div>
     </header>
+    <main class="p-4 text-center">
+      <img class="bg-gradient-to-bl from-violet-200 to-pink-200 p-4" src="/preview.webp">
+    </main>
+    <Footer />
 	</body>
 </html>
