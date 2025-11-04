@@ -5,9 +5,28 @@ import NavBar from "../components/NavBar.astro";
 import Footer from "../components/Footer.astro";
 
 interface Props {
+  title: string;
   class?: string;
 }
 ---
+
+<script>
+  const theme = (() => {
+    if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+      return localStorage.getItem("theme") ?? "light";
+    }
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+</script>
 
 <html lang="en">
 	<head>
@@ -15,9 +34,10 @@ interface Props {
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Overlap</title>
-  </Astro.>
-  <body>
+    <title>{Astro.props.title}</title>
+  </head>
+  <body class="dark:bg-[#10191E] dark:text-white">
+    <script is:inline>/** prevents Firefox from force loading html */</script>
     <NavBar />
     <main class={Astro.props.class}>
       <slot />

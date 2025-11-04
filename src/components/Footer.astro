@@ -3,19 +3,19 @@ import FaIcon from "../components/FaIcon.astro";
 import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
 ---
 
-<footer class="grid text-center gap-4 bg-[#10191E] p-8 text-sm text-white">
-  <section class="flex gap-1 flex-col">
+<footer class="grid gap-4 bg-[#10191E] p-8 text-center text-sm text-white dark:bg-white dark:text-black">
+  <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Follow Us</h2>
-    <ul class="flex flex-col gap-2 text-gray-300">
+    <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>
         <FaIcon icon={faGithub} />
-        Github
+        GitHub
       </li>
     </ul>
   </section>
   <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Support Us</h2>
-    <ul class="flex flex-col gap-2 text-gray-300">
+    <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>
         <FaIcon icon={faPatreon} />
         Patreon
@@ -24,7 +24,7 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
   </section>
   <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Overlap Projects</h2>
-    <ul class="flex flex-col gap-2 text-gray-300">
+    <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>Launcher</li>
       <li>Website</li>
       <li>Overlay</li>
@@ -32,8 +32,10 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
   </section>
   <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Links</h2>
-    <ul class="flex flex-col gap-2 text-gray-300">
-      <li>Download</li>
+    <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
+      <li>
+        <a class="underline-offset-2 hover:text-white hover:underline dark:hover:text-black" href="#">Download</a>
+      </li>
       <li>Home</li>
     </ul>
   </section>

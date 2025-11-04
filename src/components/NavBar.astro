@@ -1,13 +1,42 @@
 ---
 import "@fortawesome/fontawesome-svg-core/styles.css";
+
 import Logo from "../assets/logo.svg?raw"
+import FaIcon from "../components/FaIcon.astro";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 ---
 
-<nav class="p-4 shadow">
-  <div class="flex items-center text-3xl">
+<nav class="flex items-center justify-between p-4 shadow dark:text-white">
+  <div class="flex items-center text-2xl">
     <Fragment set:html={Logo} />
     <span class="text-xl font-bold">
       Overlap
     </span>
   </div>
+  <button class="cursor-pointer text-xl" id="theme-swticher">
+    <FaIcon class="not-dark:!hidden" icon={faSun} />
+    <FaIcon class="dark:!hidden" icon={faMoon} />
+  </button>
 </nav>
+
+<script>
+  document.getElementById("theme-swticher")!.addEventListener("click", () => {
+    const theme = (() => {
+      if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+        return localStorage.getItem("theme") ?? "light";
+      }
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        return "dark";
+      }
+      return "light";
+    })();
+
+    if (theme === "light") {
+      document.documentElement.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark")
+    } else {
+      document.documentElement.setAttribute("data-theme", "light");
+      localStorage.setItem("theme", "light")
+    }
+  })
+</script>
