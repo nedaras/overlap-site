@@ -21,20 +21,15 @@ interface Props {
     return "light";
   })();
 
-  if (theme === "light") {
-    document.documentElement.setAttribute("data-theme", "light");
-  } else {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }
+  document.documentElement.setAttribute("data-theme", theme);
 </script>
 
 <html class="h-full" lang="en">
 	<head>
-		<meta charset="utf-8" />
+	  <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&display=swap"/>
     <title>{Astro.props.title}</title>
   </head>
   <body class="flex h-full flex-col dark:bg-[#10191E] dark:text-white">
