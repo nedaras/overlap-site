@@ -4,14 +4,16 @@ import FaIcon from "../components/FaIcon.astro";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 ---
 
-<nav class="flex items-center justify-between p-4 shadow dark:text-white">
-  <div class="flex items-center text-2xl">
-    <Fragment set:html={Logo} />
-    <span class="text-xl font-bold">
+<nav class="flex items-center justify-between p-4 text-xl shadow dark:text-white">
+  <div class="flex items-center">
+    <span class="mr-1 text-2xl">
+      <Fragment set:html={Logo} />
+    </span>
+    <span class="font-bold">
       Overlap
     </span>
   </div>
-  <button class="cursor-pointer text-xl" id="theme-swticher">
+  <button class="cursor-pointer" id="theme-swticher">
     <FaIcon class="not-dark:!hidden" icon={faSun} />
     <FaIcon class="dark:!hidden" icon={faMoon} />
   </button>

@@ -8,8 +8,10 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
     <h2 class="text-base font-semibold">Follow Us</h2>
     <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>
-        <FaIcon icon={faGithub} />
-        GitHub
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="https://github.com/nedaras/overlap">
+          <FaIcon icon={faGithub} />
+          GitHub
+        </a>
       </li>
     </ul>
   </section>
@@ -17,26 +19,41 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
     <h2 class="text-base font-semibold">Support Us</h2>
     <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>
-        <FaIcon icon={faPatreon} />
-        Patreon
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="#">
+          <FaIcon icon={faPatreon} />
+          Patreon
+        </a>
       </li>
     </ul>
   </section>
   <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Overlap Projects</h2>
     <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
-      <li>Launcher</li>
-      <li>Website</li>
-      <li>Overlay</li>
+      <li>
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="#">
+          Launcher
+        </a>
+      </li>
+      <li>
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="https://github.com/nedaras/overlap-site">
+          Website
+        </a>
+      </li>
+      <li>
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="https://github.com/nedaras/overlap">
+          Overlay
+        </a>
+      </li>
     </ul>
   </section>
   <section class="flex flex-col gap-1">
     <h2 class="text-base font-semibold">Links</h2>
     <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
       <li>
-        <a class="underline-offset-2 hover:text-white hover:underline dark:hover:text-black" href="#">Download</a>
+        <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="/">
+          Home
+        </a>
       </li>
-      <li>Home</li>
     </ul>
   </section>
 </footer>
