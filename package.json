@@ -12,9 +12,9 @@
     "@fortawesome/fontawesome-svg-core": "^7.0.1",
     "@fortawesome/free-brands-svg-icons": "^7.0.1",
     "@fortawesome/free-solid-svg-icons": "^7.0.1",
-    "@tailwindcss/vite": "^4.1.13",
-    "astro": "^5.13.7",
+    "@tailwindcss/vite": "^4.1.16",
+    "astro": "^5.15.3",
     "tailwind-fmt": "^1.2.1",
-    "tailwindcss": "^4.1.13"
+    "tailwindcss": "^4.1.16"
   }
 }

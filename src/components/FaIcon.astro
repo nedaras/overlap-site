@@ -1,6 +1,7 @@
 ---
+// why is this css not optimized astro???
+// import "@fortawesome/fontawesome-svg-core/styles.css";
 import { icon, type IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import "@fortawesome/fontawesome-svg-core/styles.css";
 
 interface Props {
   icon: IconDefinition;
@@ -11,5 +12,16 @@ const iconHtml = icon(Astro.props.icon, {
   classes: Array.from(new Set(Astro.props.class?.split(" "))),
 }).html;
 ---
+
+<style is:global>
+  .svg-inline--fa {
+    box-sizing: content-box;
+    display: var(--fa-display, inline-block);
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+    width: var(--fa-width, 1.25em);
+  }
+</style>
 
 <Fragment set:html={iconHtml} />
