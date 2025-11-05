@@ -4,7 +4,7 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
 ---
 
 <div class="bg-[#10191E] dark:bg-white">
-  <footer class="mx-auto grid max-w-3xl gap-4 p-8 text-center text-sm text-white md:grid-cols-2 md:text-left dark:text-black">
+  <footer class="mx-auto grid max-w-3xl gap-4 p-8 text-center text-sm text-white md:grid-cols-3 md:text-left dark:text-black">
     <section class="flex flex-col gap-1">
       <h2 class="text-base font-semibold">Follow Us</h2>
       <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
@@ -16,7 +16,7 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
         </li>
       </ul>
     </section>
-    <section class="flex flex-col gap-1">
+    <section class="flex flex-col gap-1 md:col-start-1 md:row-start-2">
       <h2 class="text-base font-semibold">Support Us</h2>
       <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
         <li>
@@ -27,7 +27,7 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
         </li>
       </ul>
     </section>
-    <section class="flex flex-col gap-1">
+    <section class="flex flex-col gap-1 md:row-span-2">
       <h2 class="text-base font-semibold">Overlap Projects</h2>
       <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
         <li>
@@ -47,12 +47,17 @@ import { faGithub, faPatreon } from "@fortawesome/free-brands-svg-icons";
         </li>
       </ul>
     </section>
-    <section class="flex flex-col gap-1">
+    <section class="flex flex-col gap-1 md:row-span-2">
       <h2 class="text-base font-semibold">Links</h2>
       <ul class="flex flex-col gap-2 text-gray-300 dark:text-gray-700">
         <li>
           <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="/">
             Home
+          </a>
+        </li>
+        <li>
+          <a class="border-white hover:border-b hover:text-white dark:border-black dark:hover:text-black" href="#">
+            Download
           </a>
         </li>
       </ul>
